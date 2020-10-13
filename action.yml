@@ -1,13 +1,24 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'BackstopJS Action'
+description: 'GitHub Action for running BackstopJS'
+author: 'André Storhaug'
+branding:
+  icon: 'image'  
+  color: 'purple'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
-    required: true
-    default: '1000'
+  command:
+    description: 'The BackstopJS command to run.'
+    default: 'test'
+    required: false
+  config_file:
+    description: 'The path to a BackstopJS json configuration file.'
+    default: 'backstop.json'
+    required: false
+  filter:
+    description: 'The path to the image file to be compared against the base image.'
+    required: false
 outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+  backstopjs-dir:
+    description: 'The BackstopJS dir.'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'src/index.js'
