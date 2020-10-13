@@ -5,7 +5,7 @@ const path = require('path');
 async function installBackstopjs() {
   const actionDir = path.join(__dirname, '../');
   
-  console.log(__dirname);
+  core.info(__dirname);
   
   let cmd = 'npm';
   let args = ['install', 'backstopjs', '--production', '--parseable'];
