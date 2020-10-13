@@ -6,7 +6,7 @@ async function installBackstopjs() {
   const actionDir = path.join(__dirname, '../');
 
   let cmd = 'npm';
-  let args = ['install', '--only=prod'];
+  let args = ['install', 'backstopjs', '--only=prod'];
   core.info('Installing BackstopJS...');
   core.debug(`Command: ${cmd} ${args}`);
 
