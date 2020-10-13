@@ -6,7 +6,7 @@ async function installBackstopjs() {
   const actionDir = path.join(__dirname, '../');
 
   let cmd = 'npm';
-  let args = ['install', 'backstopjs', '--production', '--parseable'];
+  let args = ['ci'];
   core.info('Installing BackstopJS...');
   core.debug(`Command: ${cmd} ${args}`);
 
@@ -20,8 +20,6 @@ async function installBackstopjs() {
   options.cwd = actionDir;
 
   await exec.exec(cmd, args, options);
-  await exec.exec('ls','', options)
-  await exec.exec('npm i backstopjs','', options)
   core.debug(`Installation output: ${installOutput}`);
   return;
 }

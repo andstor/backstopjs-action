@@ -31,11 +31,11 @@
   "homepage": "https://github.com/andstor/backstopjs-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.5",
-    "@actions/exec": "^1.0.4"
+    "@actions/exec": "^1.0.4",
+    "backstopjs": "^5.0.6"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.24.1",
-    "backstopjs": "^5.0.6",
     "eslint": "^7.4.0",
     "jest": "^26.1.0"
   }
