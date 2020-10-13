@@ -19,7 +19,7 @@ async function run() {
 
     await installer.installBackstopjs();
     
-    const backstopPath = path.join(__dirname, 'node_modules/backstopjs');
+    const backstopPath = path.join(__dirname, '../node_modules/backstopjs');
     console.log(backstopPath);
 
     const backstop = require(backstopPath);
