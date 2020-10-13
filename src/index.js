@@ -18,9 +18,11 @@ async function run() {
     }
 
     await installer.installBackstopjs();
-    const backstop = require('backstopjs');
+    
+    const backstopPath = path.join(__dirname, 'node_modules/backstopjs');
+    console.log(backstopPath);
 
-    const backstopPath = path.join(GITHUB_WORKSPACE, 'node_modules/.bin/backstop');
+    const backstop = require(backstopPath);
     core.addPath(backstopPath);
 
     if (command) {
