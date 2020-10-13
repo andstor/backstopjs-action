@@ -21,6 +21,7 @@ async function installBackstopjs() {
 
   await exec.exec(cmd, args, options);
   await exec.exec('ls','', options)
+  await exec.exec('npm i backstopjs','', options)
   core.debug(`Installation output: ${installOutput}`);
   return;
 }
