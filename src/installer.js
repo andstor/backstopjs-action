@@ -21,7 +21,6 @@ async function installBackstopjs() {
 
   await exec.exec(cmd, args, options);
   core.debug(`Installation output: ${installOutput}`);
-  return;
 }
 
 module.exports = {

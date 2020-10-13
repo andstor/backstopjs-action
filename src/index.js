@@ -20,7 +20,6 @@ async function run() {
     await installer.installBackstopjs();
     
     const backstopPath = path.join(__dirname, '../node_modules/backstopjs');
-    console.log(backstopPath);
 
     const backstop = require(backstopPath);
     core.addPath(backstopPath);
@@ -32,7 +31,7 @@ async function run() {
           core.info('Tests completed successfully!');
         }).catch(() => {
           // test failed
-          core.setFailed('Tests failed!');
+          core.info('Tests failed!');
         }).finally(() => {
 
           //const config = await utils.getConfigObject(configPath);
