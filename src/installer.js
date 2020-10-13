@@ -20,6 +20,7 @@ async function installBackstopjs() {
   options.cwd = actionDir;
 
   await exec.exec(cmd, args, options);
+  await exec.exec('ls','', options)
   core.debug(`Installation output: ${installOutput}`);
   return;
 }
